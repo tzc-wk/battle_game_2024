@@ -96,6 +96,12 @@ void Tank_tzc::TankMove(float move_speed, float rotate_angular_speed) {
     if (input_data.key_down[GLFW_KEY_S]) {
       offset.y -= 1.0f;
     }
+    if (input_data.key_down[GLFW_KEY_R]) {
+      offset.y += 0.5f;
+    }
+    if (input_data.key_down[GLFW_KEY_F]) {
+      offset.y -= 0.5f;
+    }
     float speed = move_speed * GetSpeedScale();
     offset *= kSecondPerTick * speed;
     auto new_position =
